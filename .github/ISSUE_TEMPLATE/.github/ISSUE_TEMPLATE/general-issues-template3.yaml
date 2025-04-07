@@ -1,0 +1,85 @@
+name: Detailed Bug Report
+description: Report a complex bug with detailed information
+title: "[BUG]: "
+labels: ["bug", "needs-triage"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Bug Report Form
+        Please fill out this form thoroughly to help us address the issue quickly.
+  - type: input
+    id: version
+    attributes:
+      label: Software Version
+      description: What version are you using?
+      placeholder: "2.3.4"
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Platform
+      description: What OS/platform are you using?
+      placeholder: "Windows 11, macOS 13.2, Ubuntu 22.04, etc."
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: Provide a clear description of the bug
+      placeholder: "Describe what you were doing when the bug occurred and what happened."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Detailed steps to reproduce the bug
+      placeholder: |
+        1. First step
+        2. Second step
+        3. Third step
+        ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severe is this bug?
+      options:
+        - Critical (system crash, data loss)
+        - Major (functionality broken)
+        - Minor (functionality impaired)
+        - Cosmetic (visual issue only)
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error Logs
+      description: Please include any relevant logs, error output, etc.
+      render: shell
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Information
+      description: Any other information that might be helpful (screenshots, environment details)
